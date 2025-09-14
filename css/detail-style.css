@@ -135,3 +135,154 @@ body.dark-mode .page-header-logo .logo-light { display: none; }
     .awards-grid { grid-template-columns: 1fr; }
     .intro-quote blockquote { font-size: 1.5rem; }
 }
+
+/* =================================
+   Gaya untuk Halaman Blog
+   ================================= */
+.blog-layout {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.post-card {
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    transition: box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.post-card-image-link img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.post-card-content {
+    padding: 1.5rem;
+}
+
+.post-card-date {
+    font-size: 0.8rem;
+    color: var(--body-text);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.post-card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.post-card-title a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.post-card-title a:hover {
+    color: var(--primary-color);
+}
+
+.post-card-excerpt {
+    font-size: 0.95rem;
+    color: var(--body-text);
+    margin-bottom: 1.5rem;
+}
+
+/* Gaya untuk Artikel Utama (Featured) */
+.post-card.featured {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.post-card.featured .post-card-image-link img {
+    aspect-ratio: 16 / 9;
+}
+
+.post-card.featured .post-card-title {
+    font-size: 2rem;
+}
+
+.post-card.featured .btn-secondary {
+    margin-top: 0;
+}
+
+/* Grid untuk artikel lainnya */
+.post-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.post-grid .post-card {
+    margin-bottom: 0;
+}
+
+.post-grid .post-card-image-link img {
+    aspect-ratio: 16 / 10;
+}
+
+.post-grid .post-card-title {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 921px) {
+    .post-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 544px) {
+    .post-grid {
+        grid-template-columns: 1fr;
+    }
+    .post-card.featured .post-card-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* =================================
+   Gaya untuk Halaman Artikel Blog (Full)
+   ================================= */
+.blog-post-full {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.blog-post-full .page-header {
+    padding-top: 0;
+}
+
+.post-meta {
+    font-size: 0.9rem;
+    color: var(--body-text);
+    margin-bottom: 0.5rem;
+}
+
+.post-full-image {
+    margin-bottom: 2rem;
+}
+
+.post-full-image img {
+    border-radius: 8px;
+    width: 100%;
+}
+
+.post-full-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.post-full-content h3 {
+    font-size: 1.6rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}

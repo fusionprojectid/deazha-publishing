@@ -9,18 +9,18 @@
                 <div class="footer-col">
                     <h5><i class="fa-solid fa-location-dot"></i> Alamat</h5>
                     <address>
-                        Jl. Bunga Cengkeh No. 12<br>
-                        Malang, Jawa Timur 65141<br>
-                        Indonesia
+                        Jalan Locari No. 21c Lowokwaru,<br>
+                        Kota Malang - 65141<br>
+                        Jawa Timur, Indonesia
                     </address>
                 </div>
 
                 <div class="footer-col">
-                    <h5><i class="fa-solid fa-phone"></i> Telp</h5>
-                    <p><a href="tel:+6281234567890">+62 812-3456-7890</a></p>
+                    <h5><i class="fa-brands fa-whatsapp"></i> WA</h5>
+                    <p><a href="https://wa.me/628123356850" target="_blank">+62 812 335 6850</a></p>
                     
                     <h5 class="contact-spacing"><i class="fa-solid fa-envelope"></i> Email</h5>
-                    <p><a href="mailto:info@deazha.com">info@deazha.com</a></p>
+                    <p><a href="mailto:deazhaproject@gmail.com">deazhaproject@gmail.com</a></p>
                 </div>
 
                 <div class="footer-col">

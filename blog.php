@@ -1,70 +1,61 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog – Deazha Publishing</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="detail-style.css">
-</head>
-<body>
-
-    <header class="main-header">
-        <div class="container header-container">
-            <a href="index.html" class="logo">
-                <img src="./images/logo.png" alt="Logo Deazha Publishing">
-            </a>
-            <nav class="main-nav" id="nav-links">
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="katalog.html">Katalog</a></li>
-                    <li><a href="profil.html">Deazha Publishing</a></li>
-                    <li><a href="kontak.html">Hubungi Kami</a></li>
-                    <li><a href="blog.html" class="active">Blog</a></li>
-                </ul>
-            </nav>
-            <div class="header-actions">
-                <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                <button class="mobile-menu-toggle" id="menu-toggle">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-            </div>
-        </div>
-    </header>
+<?php include 'header.php'; ?>
 
     <main class="detail-page">
         <div class="container">
             <div class="page-header">
                 <h1>Blog</h1>
-                <p>Daftar artikel dan tulisan terbaru akan tersedia di sini.</p>
+                <p>Kumpulan artikel, tips, dan wawasan terbaru dari dunia literasi dan penerbitan.</p>
             </div>
+
+            <div class="blog-layout">
+                <article class="post-card featured">
+                    <a href="detail-artikel.php" class="post-card-image-link">
+                        <img src="./images/blog-featured.jpg" alt="Gambar artikel unggulan tentang proses menulis buku">
+                    </a>
+                    <div class="post-card-content">
+                        <span class="post-card-date">14 September 2025 | Tips & Trik</span>
+                        <h2 class="post-card-title"><a href="detail-artikel.php">5 Tahap Penting Sebelum Menerbitkan Buku Pertama Anda</a></h2>
+                        <p class="post-card-excerpt">Menerbitkan buku adalah impian banyak orang, namun prosesnya seringkali tampak rumit. Dari ide awal hingga naskah siap cetak, ada beberapa tahapan krusial yang tidak boleh dilewatkan...</p>
+                        <a href="detail-artikel.php" class="btn-secondary">Baca Selengkapnya</a>
+                    </div>
+                </article>
+
+                <div class="post-grid">
+                    <article class="post-card">
+                        <a href="#" class="post-card-image-link">
+                            <img src="./images/jalan-teladan-perempuan-pilihan.webp" alt="Buku Jalan Teladan Perempuan Pilihan">
+                        </a>
+                        <div class="post-card-content">
+                            <span class="post-card-date">12 Agustus 2024 | Berita</span>
+                            <h3 class="post-card-title"><a href="#">Pj. Wali Kota Malang Apresiasi Terbitnya Buku 'Perempuan Inspiratif'</a></h3>
+                            <p class="post-card-excerpt">Pj. Wali Kota Malang, Wahyu Hidayat, memberikan apresiasi tinggi terhadap Deazha Publishing atas peluncuran buku seri "Jalan Teladan Perempuan Pilihan".</p>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <a href="#" class="post-card-image-link">
+                            <img src="./images/blog-2.jpg" alt="Penandatanganan kerjasama">
+                        </a>
+                        <div class="post-card-content">
+                            <span class="post-card-date">28 Juni 2024 | Kemitraan</span>
+                            <h3 class="post-card-title"><a href="#">Deazha Jalin Kerjasama dengan FIP UM untuk Tingkatkan Literasi</a></h3>
+                            <p class="post-card-excerpt">Dalam upaya mendukung Tri Dharma Perguruan Tinggi, Deazha Publishing resmi bekerjasama dengan Fakultas Ilmu Pendidikan Universitas Negeri Malang.</p>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <a href="#" class="post-card-image-link">
+                            <img src="./images/blog-3.jpg" alt="Seseorang sedang melakukan proses editing naskah di laptop">
+                        </a>
+                        <div class="post-card-content">
+                            <span class="post-card-date">1 September 2025 | Tips & Trik</span>
+                            <h3 class="post-card-title"><a href="#">Pentingnya Self-Editing Sebelum Naskah Dikirim</a></h3>
+                            <p class="post-card-excerpt">Sebelum naskah Anda sampai ke tangan editor, ada beberapa langkah self-editing yang bisa meningkatkan kualitas tulisan Anda secara drastis.</p>
+                        </div>
+                    </article>
+                </div>
             </div>
+        </div>
     </main>
 
-    <footer class="main-footer">
-        <div class="container footer-container">
-            <div class="footer-logo">
-                <img src="./images/logo-footer.png" alt="Logo Deazha Publishing untuk bagian footer">
-            </div>
-            <div class="footer-social">
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-            </div>
-        </div>
-        <div class="footer-copyright">
-            <p>Copyright © 2025 Deazha Publishing | Powered by <a href="https://github.com/fusionprojectid" target="_blank">ArkIntelligent</a></p>
-        </div>
-    </footer>
-    
-    <script src="script.js"></script>
-</body>
-</html>
+<?php include 'footer.php'; ?>
