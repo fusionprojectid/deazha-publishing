@@ -1,0 +1,673 @@
+/* =================================
+   Tema Deazha - KODE CSS FINAL
+   ================================= */
+:root {
+    /* Variabel untuk Light Mode (Default) */
+    --primary-color: #00AC97;
+    --gradient-start: #30C7B5;
+    --gradient-end: #2A7FDC;
+    --primary-gradient: linear-gradient(90deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    
+    --dark-text: #141414;
+    --body-text: #4F5655;
+    --light-gray-bg: #F3F6F3;
+    --white-color: #FFFFFF;
+    --border-color: #ddd;
+    --header-bg: #FFFFFF;
+    --header-text: #141414;
+}
+
+body.dark-mode {
+    /* Variabel untuk Dark Mode */
+    --dark-text: #FFFFFF;
+    --body-text: #adadad;
+    --light-gray-bg: #1a1a1a;
+    --white-color: #121212;
+    --border-color: #444;
+    --header-bg: #181818;
+    --header-text: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--body-text);
+    line-height: 1.6;
+    background-color: var(--white-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark-text);
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+h1 { font-size: 3rem; font-weight: 700; }
+h2 { font-size: 2.375rem; font-weight: 700; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h6 { 
+    font-size: 1rem; 
+    color: var(--body-text); 
+    text-transform: uppercase; 
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =================================
+   Header & Navigation
+   ================================= */
+.main-header {
+    background-color: var(--header-bg);
+    padding: 1em 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.3s ease;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 220px;
+}
+
+.logo .logo-dark { display: none; }
+.logo .logo-light { display: block; }
+
+body.dark-mode .logo .logo-dark { display: block; }
+body.dark-mode .logo .logo-light { display: none; }
+
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: var(--light-gray-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 5px;
+    width: 300px;
+}
+
+.search-bar input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--dark-text);
+    width: 100%;
+    padding: 5px 10px;
+}
+
+.search-bar input::placeholder {
+    color: var(--body-text);
+}
+
+.search-bar button {
+    background: transparent;
+    border: none;
+    color: var(--body-text);
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0 5px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+#theme-switch {
+    background: transparent;
+    border: none;
+    color: var(--dark-text);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+}
+
+.main-nav a {
+    color: var(--dark-text);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover, .main-nav a.active {
+    color: var(--primary-color);
+}
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--dark-text);
+    cursor: pointer;
+    z-index: 101;
+}
+
+/* =================================
+   Hero Section & Slider
+   ================================= */
+.hero {
+    background-color: var(--light-gray-bg);
+    padding-top: 60px;
+    padding-bottom: 60px;
+    position: relative;
+}
+
+.hero-slider {
+    width: 100%;
+    height: 100%;
+}
+
+.hero .swiper-slide {
+    display: flex;
+    align-items: center;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 380px;
+    height: auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary-color);
+    margin-top: 1rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-primary {
+    background: var(--primary-gradient);
+    color: #FFFFFF;
+    border: none;
+    padding: 14px 30px;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background: var(--primary-gradient);
+    color: #FFFFFF;
+    border: none;
+    padding: 14px 30px;
+}
+
+
+/* =================================
+   Catalog Section
+   ================================= */
+.catalog {
+    padding: 80px 0;
+    text-align: center;
+    background-color: var(--white-color);
+}
+
+.catalog p {
+    max-width: 600px;
+    margin: 1em auto;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+    text-align: left;
+}
+
+.book-card {
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.book-card img {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.book-card:hover img {
+    transform: scale(1.05);
+}
+
+.book-card h3 {
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.book-card h3 a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.book-card h3 a:hover {
+    color: var(--primary-color);
+}
+
+
+/* =================================
+   About Section
+   ================================= */
+.about {
+    background-color: var(--light-gray-bg);
+    padding: 80px 0;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.about-image {
+    flex-shrink: 0;
+}
+
+.about-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    max-width: 500px;
+}
+
+/* =================================
+   Services Section
+   ================================= */
+.services {
+    padding: 80px 0;
+    text-align: center;
+    background-color: var(--white-color);
+}
+.services .section-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    color: var(--body-text);
+}
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem 2rem;
+    text-align: left;
+    margin-top: 3rem;
+}
+.service-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    opacity: 0;
+    animation: fadeUp 0.6s ease-out forwards;
+}
+
+.service-item:nth-child(1) { animation-delay: 0.1s; }
+.service-item:nth-child(2) { animation-delay: 0.2s; }
+.service-item:nth-child(3) { animation-delay: 0.3s; }
+.service-item:nth-child(4) { animation-delay: 0.4s; }
+
+.service-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background-color: var(--light-gray-bg);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+.service-content {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+.service-content h4 {
+    margin-bottom: 0.5rem;
+}
+.service-content p {
+    margin-bottom: 0;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =================================
+   Footer
+   ================================= */
+.main-footer {
+    background-color: #121212;
+    color: #FFFFFF;
+    padding: 60px 0 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.footer-logo img {
+    width: 150px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-social a {
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: var(--primary-color);
+}
+
+.footer-copyright {
+    background-color: #121212;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #333;
+}
+
+.footer-copyright p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.footer-copyright a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* =================================
+   Gaya untuk Header Halaman (Katalog, dll)
+   ================================= */
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-top: 60px;
+}
+
+.page-header h1 {
+    margin-bottom: 0.5em;
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =================================
+   Gaya untuk Navigasi Halaman (Pagination)
+   ================================= */
+.pagination {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.pagination a, .pagination span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--body-text);
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    min-width: 40px;
+    height: 40px;
+    padding: 0 10px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.pagination .page-info {
+    background-color: transparent;
+    border-color: var(--border-color);
+    color: var(--body-text);
+    padding: 0 1rem;
+}
+
+.pagination a:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.pagination .current {
+    background: var(--primary-gradient);
+    color: #FFFFFF;
+    border: none;
+    font-weight: 600;
+    pointer-events: none;
+}
+
+
+/* =================================
+   Responsiveness (Media Queries)
+   ================================= */
+@media (max-width: 921px) {
+    .main-nav, .search-bar {
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .header-right {
+        gap: 1rem;
+    }
+    
+    .main-nav {
+        position: absolute;
+        right: 0;
+        top: 80px;
+        background-color: var(--white-color);
+        width: 80%;
+        max-width: 300px;
+        height: auto;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in-out;
+        box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 8px 0 0 8px;
+        flex-direction: column;
+        border: 1px solid var(--border-color);
+    }
+
+    .main-nav.nav-active {
+        display: block;
+        transform: translateX(0);
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 0;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: left;
+    }
+
+    .nav-links a {
+        padding: 1rem 1.5rem;
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid var(--border-color);
+        color: var(--dark-text);
+    }
+
+    .nav-links li:last-child a {
+        border-bottom: none;
+    }
+
+    .hero-container, .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text {
+        order: 2;
+    }
+    .hero-image {
+        order: 1;
+        margin-bottom: 2rem;
+    }
+    .book-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 544px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    
+    .book-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image img {
+        max-width: 300px;
+    }
+    
+    .about-image img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+
+/* =================================
+   Gaya & Perbaikan untuk Slider
+   ================================= */
+.hero .swiper-button-next,
+.hero .swiper-button-prev {
+    color: var(--primary-color);
+}
+
+.hero .swiper-pagination-bullet {
+    background-color: #ccc;
+    opacity: 1;
+}
+
+.hero .swiper-pagination-bullet-active {
+    background: var(--primary-gradient);
+}
+
+.hero .swiper-slide {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero .swiper-slide-active {
+    opacity: 1;
+    visibility: visible;
+}
