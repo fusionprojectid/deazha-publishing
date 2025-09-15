@@ -15,6 +15,8 @@
     --border-color: #ddd;
     --header-bg: #FFFFFF;
     --header-text: #141414;
+    --section-bg-light: #F3F6F3; /* Warna latar belakang bagian terang */
+    --section-bg-dark: #FFFFFF; /* Warna latar belakang bagian gelap */
 }
 
 body.dark-mode {
@@ -22,10 +24,12 @@ body.dark-mode {
     --dark-text: #FFFFFF;
     --body-text: #adadad;
     --light-gray-bg: #1a1a1a;
-    --white-color: #121212;
+    --white-color: #121212; /* Warna default background */
     --border-color: #444;
     --header-bg: #181818;
     --header-text: #FFFFFF;
+    --section-bg-light: #1e1e1e; /* Latar belakang bagian terang di dark mode */
+    --section-bg-dark: #121212; /* Latar belakang bagian gelap di dark mode, sama dengan body */
 }
 
 * {
@@ -269,7 +273,7 @@ body.dark-mode .logo .logo-light { display: none; }
 .catalog {
     padding: 80px 0;
     text-align: center;
-    background-color: var(--white-color);
+    background-color: var(--section-bg-dark); /* Menggunakan variabel baru */
 }
 
 .catalog p {
@@ -322,7 +326,7 @@ body.dark-mode .logo .logo-light { display: none; }
    About Section
    ================================= */
 .about {
-    background-color: var(--light-gray-bg);
+    background-color: var(--section-bg-light); /* Menggunakan variabel baru */
     padding: 80px 0;
 }
 
@@ -355,7 +359,7 @@ body.dark-mode .logo .logo-light { display: none; }
 .services {
     padding: 80px 0;
     text-align: center;
-    background-color: var(--white-color);
+    background-color: var(--section-bg-dark); /* Menggunakan variabel baru */
 }
 .services .section-subtitle {
     font-family: 'Inter', sans-serif;
@@ -374,13 +378,22 @@ body.dark-mode .logo .logo-light { display: none; }
     align-items: flex-start;
     gap: 1.5rem;
     opacity: 0;
-    animation: fadeUp 0.6s ease-out forwards;
+    transform: translateY(30px); /* Posisi awal untuk animasi */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.service-item:nth-child(1) { animation-delay: 0.1s; }
-.service-item:nth-child(2) { animation-delay: 0.2s; }
-.service-item:nth-child(3) { animation-delay: 0.3s; }
-.service-item:nth-child(4) { animation-delay: 0.4s; }
+/* Delay animasi untuk setiap item */
+.service-item:nth-child(1) { transition-delay: 0.1s; }
+.service-item:nth-child(2) { transition-delay: 0.2s; }
+.service-item:nth-child(3) { transition-delay: 0.3s; }
+.service-item:nth-child(4) { transition-delay: 0.4s; }
+
+/* Kelas untuk mengaktifkan animasi saat terlihat */
+.service-item.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 .service-icon {
     flex-shrink: 0;
@@ -405,23 +418,12 @@ body.dark-mode .logo .logo-light { display: none; }
     margin-bottom: 0;
 }
 
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 
 /* =================================
    Footer
    ================================= */
 .main-footer {
-    background-color: #121212;
+    background-color: #121212; /* Warna latar belakang footer tetap hitam */
     color: #FFFFFF;
     padding: 60px 0 0;
 }
