@@ -21,9 +21,6 @@
     <link rel="stylesheet" href="css/detail-style.css">
 </head>
 <body>
-    </body>
-</html>
-<body>
 
     <header class="main-header">
         <div class="container header-container">
@@ -41,7 +38,7 @@
                 </button>
                 <nav class="main-nav" id="nav-links">
                     <ul class="nav-links">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html" class="active">Home</a></li>
                         <li><a href="katalog.html">Katalog</a></li>
                         <li><a href="profil.html">Profil</a></li>
                         <li><a href="kontak.html">Hubungi Kami</a></li>
@@ -65,7 +62,7 @@
                                 <h6>New Release</h6>
                                 <h1>Jalan Teladan Perempuan Pilihan</h1>
                                 <p>Rilisan terbaru Deazha Prima Nusantara, menyajikan kisah-kisah inspiratif.</p>
-                                <a href="katalog.html" class="btn btn-primary">Lihat Detail Buku</a>
+                                <a href="detail-jalan-teladan.html" class="btn btn-primary">Lihat Detail Buku</a>
                             </div>
                             <div class="hero-image">
                                 <img src="./images/jalan-teladan-perempuan-pilihan.webp" alt="Sampul buku Jalan Teladan Perempuan Pilihan">
@@ -78,7 +75,7 @@
                                 <h6>Featured Book</h6>
                                 <h1>Perempuan Menembus Parlemen</h1>
                                 <p>Strategi pemenangan perempuan dalam pemilu legislatif yang komprehensif.</p>
-                                <a href="katalog.html" class="btn btn-primary">Lihat Detail Buku</a>
+                                <a href="detail-perempuan-parlemen.html" class="btn btn-primary">Lihat Detail Buku</a>
                             </div>
                             <div class="hero-image">
                                 <img src="./images/Perempuan-Menembus-Parlemen-scaled.webp" alt="Sampul buku Perempuan Menembus Parlemen">
@@ -91,7 +88,7 @@
                                 <h6>Featured Book</h6>
                                 <h1>Eco-Teologi: Green Campus</h1>
                                 <p>Mewujudkan lingkungan hijau dan berkelanjutan dari perspektif teologi.</p>
-                                <a href="katalog.html" class="btn btn-primary">Lihat Detail Buku</a>
+                                <a href="detail-eco-teologi.html" class="btn btn-primary">Lihat Detail Buku</a>
                             </div>
                             <div class="hero-image">
                                 <img src="./images/Eco-Teologi-Mewujudkan-Green-Campus-dan-Eco-Pesantren.webp" alt="Sampul buku Eco-Teologi Mewujudkan Green Campus">
@@ -99,8 +96,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
                 <div class="swiper-pagination"></div>
             </div>
         </section>
@@ -109,22 +104,39 @@
              <div class="container">
                 <h2>Katalog Buku</h2>
                 <p>Telah berkecimpung dalam dunia penulisan dan penerbitan buku, inilah beberapa rilisan Deazha Prima Nusantara.</p>
-                <div class="book-grid">
-                    <div class="book-card">
-                        <a href="detail-perempuan-parlemen.html"><img src="./images/Perempuan-Menembus-Parlemen-scaled.webp" alt="Sampul buku Perempuan Menembus Parlemen"></a>
-                        <h3><a href="detail-perempuan-parlemen.html">Perempuan Menembus Parlemen</a></h3>
-                    </div>
-                    <div class="book-card">
-                        <a href="detail-eco-teologi.html"><img src="./images/Eco-Teologi-Mewujudkan-Green-Campus-dan-Eco-Pesantren.webp" alt="Sampul buku Eco-Teologi"></a>
-                        <h3><a href="detail-eco-teologi.html">Eco-Teologi: Mewujudkan Green Campus</a></h3>
-                    </div>
-                    <div class="book-card">
-                        <a href="#"><img src="./images/Antologi-Cerpen-When-The-Light-Comes_Deazha.webp" alt="Sampul buku Antologi Cerpen When The Light Comes"></a>
-                        <h3><a href="#">Antologi Cerpen When The Light Comes</a></h3>
-                    </div>
-                    <div class="book-card">
-                        <a href="#"><img src="./images/OJK-Malang-Membangun-Sinergi-Mengabdi-untuk-Negeri.webp" alt="Sampul buku OJK Malang Membangun Sinergi"></a>
-                        <h3><a href="#">OJK Malang Membangun Sinergi</a></h3>
+                
+                <div class="swiper catalog-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="book-card">
+                                <a href="detail-perempuan-parlemen.html"><img src="./images/Perempuan-Menembus-Parlemen-scaled.webp" alt="Sampul buku Perempuan Menembus Parlemen"></a>
+                                <h3><a href="detail-perempuan-parlemen.html">Perempuan Menembus Parlemen</a></h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="book-card">
+                                <a href="detail-eco-teologi.html"><img src="./images/Eco-Teologi-Mewujudkan-Green-Campus-dan-Eco-Pesantren.webp" alt="Sampul buku Eco-Teologi"></a>
+                                <h3><a href="detail-eco-teologi.html">Eco-Teologi: Mewujudkan Green Campus</a></h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="book-card">
+                                <a href="detail-jalan-teladan.html"><img src="./images/jalan-teladan-perempuan-pilihan.webp" alt="Sampul buku Jalan Teladan Perempuan Pilihan"></a>
+                                <h3><a href="detail-jalan-teladan.html">Jalan Teladan Perempuan Pilihan</a></h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="book-card">
+                                <a href="#"><img src="./images/Antologi-Cerpen-When-The-Light-Comes_Deazha.webp" alt="Sampul buku Antologi Cerpen When The Light Comes"></a>
+                                <h3><a href="#">Antologi Cerpen When The Light Comes</a></h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="book-card">
+                                <a href="#"><img src="./images/OJK-Malang-Membangun-Sinergi-Mengabdi-untuk-Negeri.webp" alt="Sampul buku OJK Malang Membangun Sinergi"></a>
+                                <h3><a href="#">OJK Malang Membangun Sinergi</a></h3>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -189,7 +201,6 @@
                     <h4>Deazha Publishing</h4>
                     <p>Creative Publishing & Event Partner yang berfokus pada layanan penerbitan buku, event organizer, dan jasa konsultasi.</p>
                 </div>
-
                 <div class="footer-col">
                     <h5><i class="fa-solid fa-location-dot"></i> Alamat</h5>
                     <address>
@@ -198,15 +209,12 @@
                         Jawa Timur, Indonesia
                     </address>
                 </div>
-
                 <div class="footer-col">
                     <h5><i class="fa-brands fa-whatsapp"></i> Whatsapp</h5>
                     <p><a href="https://wa.me/628123356850" target="_blank">+62 812 335 6850</a></p>
-                    
                     <h5 class="contact-spacing"><i class="fa-solid fa-envelope"></i> Email</h5>
                     <p><a href="mailto:deazhaproject@gmail.com">deazhaproject@gmail.com</a></p>
                 </div>
-
                 <div class="footer-col">
                     <img src="./images/logo-putih.png" alt="Logo Deazha Publishing" class="footer-logo-main">
                     <div class="footer-social">

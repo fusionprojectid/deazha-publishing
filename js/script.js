@@ -11,7 +11,7 @@ if (menuToggle && navLinks) {
 
 // --- Kode untuk Hero Slider (Swiper.js) ---
 if (document.querySelector('.hero-slider')) {
-    const swiper = new Swiper('.hero-slider', {
+    new Swiper('.hero-slider', {
         direction: 'horizontal',
         loop: true,
         effect: 'fade',
@@ -24,10 +24,23 @@ if (document.querySelector('.hero-slider')) {
             el: '.swiper-pagination',
             clickable: true,
         },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+    });
+}
+
+
+// --- Kode untuk Catalog Slider (Swiper.js) ---
+if (document.querySelector('.catalog-slider')) {
+    new Swiper('.catalog-slider', {
+        loop: true,
+        spaceBetween: 30,
+        slidesPerView: 'auto',
+        speed: 8000,
+        autoplay: { 
+            delay: 0,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
         },
+        allowTouchMove: false,
     });
 }
 
@@ -81,8 +94,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const relatedBooksGrid = document.getElementById('related-books-grid');
     if (relatedBooksGrid) {
         const allBooks = [
-            { title: 'Perempuan Menembus Parlemen', imgSrc: './images/Perempuan-Menembus-Parlemen-scaled.webp', link: 'detail-perempuan-parlemen.html' },
-            { title: 'Eco-Teologi: Mewujudkan Green Campus', imgSrc: './images/Eco-Teologi-Mewujudkan-Green-Campus-dan-Eco-Pesantren.webp', link: 'detail-eco-teologi.html' },
+            { title: 'Perempuan Menembus Parlemen: Strategi Pemenangan di Pemilu Legislatif', imgSrc: './images/Perempuan-Menembus-Parlemen-scaled.webp', link: 'detail-perempuan-parlemen.html' },
+            { title: 'Eco-Teologi: Mewujudkan Green Campus dan Eco-Pesantren', imgSrc: './images/Eco-Teologi-Mewujudkan-Green-Campus-dan-Eco-Pesantren.webp', link: 'detail-eco-teologi.html' },
+            { title: 'Jalan Teladan Perempuan Pilihan', imgSrc: './images/jalan-teladan-perempuan-pilihan.webp', link: 'detail-jalan-teladan.html' },
             { title: 'Antologi Cerpen When The Light Comes', imgSrc: './images/Antologi-Cerpen-When-The-Light-Comes_Deazha.webp', link: '#' },
             { title: 'OJK Malang Membangun Sinergi', imgSrc: './images/OJK-Malang-Membangun-Sinergi-Mengabdi-untuk-Negeri.webp', link: '#' },
             { title: 'Kepak Swa Bhuwana Paksa', imgSrc: './images/kepak-swa-bhuwana-paksa.webp', link: '#' },
@@ -91,7 +105,6 @@ document.addEventListener('DOMContentLoaded', () => {
             { title: 'Visionary Leadership', imgSrc: './images/visionary-leadership.webp', link: '#' },
             { title: 'Menyoal Problem Kesehatan Mental', imgSrc: './images/kesehatan-mental.webp', link: '#' },
             { title: 'Telusur Mitigasi Bencana KWW', imgSrc: './images/kampung-warna-warni.webp', link: '#' },
-            { title: 'Jalan Teladan Perempuan Pilihan', imgSrc: './images/jalan-teladan-perempuan-pilihan.webp', link: '#' },
             { title: 'Kain Marun-marun', imgSrc: './images/kain-marun-marun.webp', link: '#' },
             { title: 'Adaptasi & Kreativitas', imgSrc: './images/adaptasi-kreativitas-um.webp', link: '#' },
             { title: 'Manajemen Mutu Madrasah', imgSrc: './images/manajemen-mutu-madrasah.webp', link: '#' },
@@ -118,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
         relatedBooksGrid.innerHTML = relatedBooksHTML;
     }
 
-    // --- FUNGSI BARU UNTUK ANIMASI ANGKA (COUNTER) ---
+    // --- FUNGSI UNTUK ANIMASI ANGKA (COUNTER) ---
     const statsGrid = document.querySelector('.stats-grid');
     if (statsGrid) {
         const observer = new IntersectionObserver((entries) => {
@@ -129,13 +142,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         const animate = () => {
                             const goal = +counter.getAttribute('data-goal');
                             const value = +counter.innerText;
-                            const increment = Math.max(1, Math.ceil(goal / 100)); // Kecepatan hitung
-
+                            const increment = Math.max(1, Math.ceil(goal / 100));
                             if (value < goal) {
                                 counter.innerText = Math.min(goal, value + increment);
-                                setTimeout(animate, 15); // Waktu update (ms)
+                                setTimeout(animate, 15);
                             } else {
-                                // Menambahkan 'K+' khusus untuk angka 100
                                 if (goal === 100) {
                                     counter.innerText = goal + 'K+';
                                 } else {
@@ -145,10 +156,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         };
                         animate();
                     });
-                    observer.unobserve(entry.target); // Hentikan observasi setelah animasi berjalan
+                    observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.5 }); // Animasi berjalan saat 50% elemen terlihat
+        }, { threshold: 0.5 });
 
         observer.observe(statsGrid);
     }
