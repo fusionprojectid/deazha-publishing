@@ -426,25 +426,68 @@ body.dark-mode .logo .logo-light { display: none; }
     padding: 60px 0 0;
 }
 
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1.5fr 1fr;
+    gap: 2.5rem;
     padding-bottom: 40px;
 }
 
-.footer-logo img {
-    width: 150px;
+.footer-col h4, .footer-col h5 {
+    font-family: 'Poppins', sans-serif;
+    color: #FFFFFF;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.footer-col h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.footer-col h5 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-col p, .footer-col address {
+    color: #ccc;
+    font-style: normal;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.footer-col a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-col a:hover {
+    color: var(--primary-color);
+}
+
+.footer-col .contact-spacing {
+    margin-top: 1.5rem;
+}
+
+.footer-logo-main {
+    max-width: 150px;
+    margin-bottom: 1.5rem;
 }
 
 .footer-social {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .footer-social a {
     color: #FFFFFF;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     transition: color 0.3s ease;
 }
 
@@ -619,8 +662,8 @@ body.dark-mode .logo .logo-light { display: none; }
     .services-grid {
         grid-template-columns: 1fr;
     }
-    .footer-container {
-        flex-direction: column;
+    .footer-grid {
+        grid-template-columns: 1fr 1fr; /* 2 columns on tablets */
         gap: 2rem;
     }
 }
@@ -640,6 +683,21 @@ body.dark-mode .logo .logo-light { display: none; }
     .about-image img {
         width: 250px;
         height: 250px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+        text-align: center;
+    }
+    .footer-col h4, .footer-col h5 {
+        justify-content: center; /* Center headings and icons */
+    }
+    .footer-logo-main {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .footer-social {
+        justify-content: center; /* Center social icons */
     }
 }
 

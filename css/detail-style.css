@@ -286,3 +286,93 @@ body.dark-mode .page-header-logo .logo-light { display: none; }
     margin-top: 2.5rem;
     margin-bottom: 1rem;
 }
+
+/* =================================
+   Gaya untuk Halaman Kontak
+   ================================= */
+.contact-layout {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    align-items: flex-start;
+}
+
+.contact-details {
+    flex: 1;
+}
+
+.contact-form {
+    flex: 1.5;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-top: 5px;
+    width: 25px;
+    text-align: center;
+}
+
+.contact-item h4 {
+    margin-bottom: 0.25rem;
+}
+
+.contact-item p {
+    margin-bottom: 0;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--dark-text);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    background-color: var(--white-color);
+    color: var(--dark-text);
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.map-section {
+    text-align: center;
+    margin-top: 4rem;
+    padding-top: 4rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.map-section h3 {
+    margin-bottom: 2rem;
+}
+
+/* Penyesuaian Responsif untuk Halaman Kontak */
+@media (max-width: 921px) {
+    .contact-layout {
+        flex-direction: column;
+        gap: 4rem;
+    }
+}
