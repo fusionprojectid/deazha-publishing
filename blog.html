@@ -1,15 +1,18 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deazha Publishing</title> 
+    <meta name="description" content="Artikel Deazha Publishing tentang literasi, penerbitan buku, self-editing, branding, pendidikan, dan berita publikasi.">
+    <meta property="og:title" content="Deazha Publishing">
+    <meta property="og:description" content="Artikel Deazha Publishing tentang literasi, penerbitan buku, self-editing, branding, pendidikan, dan berita publikasi.">
+    <meta property="og:image" content="./images/logo-hitam.png">    <title>Deazha Publishing</title> 
     
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./site.webmanifest" />
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,9 +24,6 @@
     <link rel="stylesheet" href="css/detail-style.css">
 </head>
 <body>
-    </body>
-</html>
-<body>
 
     <header class="main-header">
         <div class="container header-container">
@@ -32,23 +32,28 @@
                 <img src="./images/logo-putih.png" alt="Logo Deazha Publishing" class="logo-dark">
             </a>
             <div class="search-bar">
-                <input type="text" placeholder="Search...">
+                <input type="search" id="site-search" placeholder="Cari buku atau artikel..." aria-label="Cari buku atau artikel">
                 <button type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
             <div class="header-right">
                 <button id="theme-switch" aria-label="Toggle Dark Mode">
                     <i class="fa-solid fa-moon"></i>
                 </button>
+                <div class="language-switch" aria-label="Pilihan bahasa">
+                    <button type="button" class="language-option active" data-lang="id">ID</button>
+                    <button type="button" class="language-option" data-lang="en">EN</button>
+                </div>
                 <nav class="main-nav" id="nav-links">
                     <ul class="nav-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="katalog.html">Katalog</a></li>
+                        <li><a href="layanan.html">Layanan</a></li>
                         <li><a href="profil.html">Profil</a></li>
                         <li><a href="kontak.html">Hubungi Kami</a></li>
                         <li><a href="blog.html" class="active">Blog</a></li>
                     </ul>
                 </nav>
-                <button class="mobile-menu-toggle" id="menu-toggle">
+                <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Buka menu" aria-expanded="false">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
@@ -64,48 +69,125 @@
 
             <div class="blog-layout">
                 <article class="post-card featured">
-                    <a href="detail-artikel.html" class="post-card-image-link">
+                    <a href="5-tahap-penting-sebelum-menerbitkan-buku-pertama-anda.html" class="post-card-image-link">
                         <img src="./images/5-Tahap-Penting Sebelum-Menerbitkan Buku-Pertama-Anda.jpg" alt="Gambar artikel unggulan tentang proses menulis buku">
                     </a>
                     <div class="post-card-content">
                         <span class="post-card-date">14 September 2025 | Tips & Trik</span>
                         <h2 class="post-card-title"><a href="5-tahap-penting-sebelum-menerbitkan-buku-pertama-anda.html">5 Tahap Penting Sebelum Menerbitkan Buku Pertama Anda</a></h2>
                         <p class="post-card-excerpt">Menerbitkan buku adalah impian banyak orang, namun prosesnya seringkali tampak rumit. Dari ide awal hingga naskah siap cetak, ada beberapa tahapan krusial yang tidak boleh dilewatkan...</p>
-                        <a href="detail-artikel.html" class="btn-secondary">Baca Selengkapnya</a>
+                        <a href="5-tahap-penting-sebelum-menerbitkan-buku-pertama-anda.html" class="btn-secondary">Baca Selengkapnya</a>
                     </div>
                 </article>
 
                 <div class="post-grid">
                     <article class="post-card">
-                        <a href="#" class="post-card-image-link">
-                            <img src="./images/Wahyu-Hidayat-2.jpg" alt="Buku Jalan Teladan Perempuan Pilihan">
-                        </a>
-                        <div class="post-card-content">
-                            <span class="post-card-date">12 Agustus 2024 | Berita</span>
-                            <h3 class="post-card-title"><a href="#">Pj. Wali Kota Malang Apresiasi Terbitnya Buku 'Perempuan Inspiratif'</a></h3>
-                            <p class="post-card-excerpt">Pj. Wali Kota Malang, Wahyu Hidayat, memberikan apresiasi tinggi terhadap Deazha Publishing atas peluncuran buku seri "Jalan Teladan Perempuan Pilihan".</p>
-                        </div>
-                    </article>
-
-                    <article class="post-card">
-                        <a href="#" class="post-card-image-link">
-                            <img src="./images/buku-FIP-UM.jpg" alt="Penandatanganan kerjasama">
-                        </a>
-                        <div class="post-card-content">
-                            <span class="post-card-date">28 Juni 2024 | Kemitraan</span>
-                            <h3 class="post-card-title"><a href="#">Deazha Jalin Kerjasama dengan FIP UM untuk Tingkatkan Literasi</a></h3>
-                            <p class="post-card-excerpt">Dalam upaya mendukung Tri Dharma Perguruan Tinggi, Deazha Publishing resmi bekerjasama dengan Fakultas Ilmu Pendidikan Universitas Negeri Malang.</p>
-                        </div>
-                    </article>
-
-                    <article class="post-card">
-                        <a href="#" class="post-card-image-link">
+                        <a href="pentingnya-self-editing-sebelum-naskah-dikirim.html" class="post-card-image-link">
                             <img src="./images/about-typewriter.webp" alt="Seseorang sedang melakukan proses editing naskah di laptop">
                         </a>
                         <div class="post-card-content">
                             <span class="post-card-date">1 September 2025 | Tips & Trik</span>
-                            <h3 class="post-card-title"><a href="#">Pentingnya Self-Editing Sebelum Naskah Dikirim</a></h3>
-                            <p class="post-card-excerpt">Sebelum naskah Anda sampai ke tangan editor, ada beberapa langkah self-editing yang bisa meningkatkan kualitas tulisan Anda secara drastis.</p>
+                            <h3 class="post-card-title"><a href="pentingnya-self-editing-sebelum-naskah-dikirim.html">Pentingnya Self-Editing Sebelum Naskah Dikirim</a></h3>
+                            <p class="post-card-excerpt">Self-editing membantu penulis menata struktur, bahasa, alur, dan konsistensi naskah sebelum masuk ke tahap penyuntingan profesional.</p>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <a href="cara-menentukan-target-pembaca-sebelum-menulis-buku.html" class="post-card-image-link">
+                            <img src="./images/Cara-Menentukan-Target-Pembaca.webp" alt="Menentukan target pembaca sebelum menulis buku">
+                        </a>
+                        <div class="post-card-content">
+                            <span class="post-card-date">28 Agustus 2025 | Tips & Trik</span>
+                            <h3 class="post-card-title"><a href="cara-menentukan-target-pembaca-sebelum-menulis-buku.html">Cara Menentukan Target Pembaca Sebelum Menulis Buku</a></h3>
+                            <p class="post-card-excerpt">Target pembaca membantu penulis memilih gaya bahasa, kedalaman materi, contoh kasus, hingga arah desain buku.</p>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <a href="mengapa-layout-buku-penting-untuk-kenyamanan-membaca.html" class="post-card-image-link">
+                            <img src="./images/layout-buku-pennting.webp" alt="Layout buku untuk kenyamanan membaca">
+                        </a>
+                        <div class="post-card-content">
+                            <span class="post-card-date">25 Agustus 2025 | Tips & Trik</span>
+                            <h3 class="post-card-title"><a href="mengapa-layout-buku-penting-untuk-kenyamanan-membaca.html">Mengapa Layout Buku Penting untuk Kenyamanan Membaca</a></h3>
+                            <p class="post-card-excerpt">Tata letak yang baik membuat buku terasa rapi, nyaman dibaca, dan lebih profesional ketika sampai ke tangan pembaca.</p>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <a href="digital-marketing-brand-image-pesantren.html" class="post-card-image-link">
+                            <img src="./images/Digital-Marketing-untuk-Meningkatkan-Brand-Image-Pesantren.webp" alt="Digital marketing untuk brand image pesantren">
+                        </a>
+                        <div class="post-card-content">
+                            <span class="post-card-date">30 Juni 2024 | Riset & Pendidikan</span>
+                            <h3 class="post-card-title"><a href="digital-marketing-brand-image-pesantren.html">Digital Marketing untuk Meningkatkan Brand Image Pesantren</a></h3>
+                            <p class="post-card-excerpt">Riset Tarbiyatuna ini relevan dengan publikasi, branding, dan dokumentasi karya lembaga pendidikan.</p>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <a href="deazha-jalin-kerjasama-fip-um.html" class="post-card-image-link">
+                            <img src="./images/buku-FIP-UM.jpg" alt="Penandatanganan kerjasama">
+                        </a>
+                        <div class="post-card-content">
+                            <span class="post-card-date">6 Maret 2024 | Kemitraan</span>
+                            <h3 class="post-card-title"><a href="deazha-jalin-kerjasama-fip-um.html">Deazha Jalin Kerjasama dengan FIP UM untuk Tingkatkan Literasi</a></h3>
+                            <p class="post-card-excerpt">FIP Universitas Negeri Malang menggandeng Deazha Prima Nusantara untuk memperkuat literasi, penerbitan karya, dan branding kelembagaan.</p>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <a href="pj-wali-kota-malang-apresiasi-buku-perempuan-inspiratif.html" class="post-card-image-link">
+                            <img src="./images/Wahyu-Hidayat-2.jpg" alt="Buku Jalan Teladan Perempuan Pilihan">
+                        </a>
+                        <div class="post-card-content">
+                            <span class="post-card-date">20 Januari 2024 | Berita</span>
+                            <h3 class="post-card-title"><a href="pj-wali-kota-malang-apresiasi-buku-perempuan-inspiratif.html">Pj. Wali Kota Malang Dorong Literasi dengan Buku Perempuan Inspiratif</a></h3>
+                            <p class="post-card-excerpt">Peluncuran buku Perempuan Inspiratif menjadi bagian dari dorongan literasi dan dokumentasi kisah perempuan teladan.</p>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <a href="prof-ilfi-nur-diana-perempuan-inspiratif-2024.html" class="post-card-image-link">
+                            <img src="./images/Ilfi-Nur-Diana.webp" alt="Kisah Prof Ilfi Nur Diana sebagai perempuan inspiratif">
+                        </a>
+                        <div class="post-card-content">
+                            <span class="post-card-date">20 Januari 2024 | Tokoh Inspiratif</span>
+                            <h3 class="post-card-title"><a href="prof-ilfi-nur-diana-perempuan-inspiratif-2024.html">Terpilih Jadi Perempuan Inspiratif 2024, Begini Kisah Prof Ilfi Nur Diana</a></h3>
+                            <p class="post-card-excerpt">Kisah Prof Ilfi Nur Diana masuk dalam buku Perempuan Inspiratif yang diterbitkan Deazha Prima Nusantara.</p>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <a href="madrasah-principal-decision-making-rewards.html" class="post-card-image-link">
+                            <img src="./images/manajemen-mutu-madrasah.webp" alt="Pengambilan keputusan kepala madrasah">
+                        </a>
+                        <div class="post-card-content">
+                            <span class="post-card-date">2024 | Riset & Pendidikan</span>
+                            <h3 class="post-card-title"><a href="madrasah-principal-decision-making-rewards.html">Pengambilan Keputusan Kepala Madrasah dalam Pemberian Reward Guru</a></h3>
+                            <p class="post-card-excerpt">Ringkasan artikel akademik tentang reward guru, kinerja, dan prinsip keadilan dalam manajemen madrasah.</p>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <a href="alumni-gontor-putri-lawan-hoaks-media-benar.html" class="post-card-image-link">
+                            <img src="./images/Alumni-Gontor-Putri-Lawan-Hoaks-Bertemankan-dengan-Media-yang-Benar.webp" alt="Lawan hoaks dengan media yang benar">
+                        </a>
+                        <div class="post-card-content">
+                            <span class="post-card-date">3 Maret 2021 | Literasi Media</span>
+                            <h3 class="post-card-title"><a href="alumni-gontor-putri-lawan-hoaks-media-benar.html">Alumni Gontor Putri: Lawan Hoaks, Bertemankan dengan Media yang Benar</a></h3>
+                            <p class="post-card-excerpt">Dewi Yuhana mengajak peserta mengenali media agar lebih bijak membaca berita dan menulis opini.</p>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <a href="perempuan-strategis-perangi-hoaks.html" class="post-card-image-link">
+                            <img src="./images/Alumni-Gontor-Putri-Perempuan-Strategis-Perangi-Hoaks.webp" alt="Perempuan strategis memerangi hoaks">
+                        </a>
+                        <div class="post-card-content">
+                            <span class="post-card-date">1 Maret 2021 | Literasi Media</span>
+                            <h3 class="post-card-title"><a href="perempuan-strategis-perangi-hoaks.html">Alumni Gontor Putri: Perempuan Strategis Perangi Hoaks</a></h3>
+                            <p class="post-card-excerpt">Perempuan dan keluarga punya peran penting dalam membangun kebiasaan cek fakta dan literasi media.</p>
                         </div>
                     </article>
                 </div>
@@ -141,7 +223,7 @@
                 <div class="footer-col">
                     <img src="./images/logo-putih.png" alt="Logo Deazha Publishing" class="footer-logo-main">
                     <div class="footer-social">
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/penerbitdeazha/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
                     </div>
@@ -149,11 +231,18 @@
             </div>
        </div>
        <div class="footer-copyright">
-            <p>Copyright © 2025 Deazha Publishing | Powered by <a href="https://github.com/fusionprojectid" target="_blank">ArkIntelligent</a></p>
+            <p>Copyright &copy; 2025 Deazha Publishing | Powered by <a href="https://github.com/fusionprojectid" target="_blank">ArkIntelligent</a></p>
         </div>
     </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/site-data.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
+
+
+
+
+
+

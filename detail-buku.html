@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Deazha Publishing membantu penerbitan buku, penulisan, desain cover, layout, ISBN, cetak, event, dan konsultasi publikasi.">
+    <meta property="og:title" content="Deazha Publishing">
+    <meta property="og:description" content="Deazha Publishing membantu penerbitan buku, penulisan, desain cover, layout, ISBN, cetak, event, dan konsultasi publikasi.">
+    <meta property="og:image" content="./images/logo-hitam.png">    <title>Detail Buku - Deazha Publishing</title>
+
+    <link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/detail-style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="./images/logo-hitam.png" alt="Logo Deazha Publishing" class="logo-light">
+                <img src="./images/logo-putih.png" alt="Logo Deazha Publishing" class="logo-dark">
+            </a>
+            <div class="search-bar">
+                <input type="search" id="site-search" placeholder="Cari buku atau artikel..." aria-label="Cari buku atau artikel">
+                <button type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="header-right">
+                <button id="theme-switch" aria-label="Toggle Dark Mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <div class="language-switch" aria-label="Pilihan bahasa">
+                    <button type="button" class="language-option active" data-lang="id">ID</button>
+                    <button type="button" class="language-option" data-lang="en">EN</button>
+                </div>
+                <nav class="main-nav" id="nav-links">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="katalog.html" class="active">Katalog</a></li>
+                        <li><a href="layanan.html">Layanan</a></li>
+                        <li><a href="profil.html">Profil</a></li>
+                        <li><a href="kontak.html">Hubungi Kami</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Buka menu" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="detail-page" data-book-detail>
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <a href="katalog.html">Buku</a> / <span id="detail-breadcrumb-title">Detail Buku</span>
+            </div>
+
+            <div class="product-layout">
+                <div class="product-image">
+                    <img id="detail-book-image" src="./images/deafult-book-cover.webp" alt="Sampul buku">
+                </div>
+                <div class="product-summary">
+                    <h1 class="product-title" id="detail-book-title">Detail Buku</h1>
+                    <div class="product-description" id="detail-book-meta"></div>
+                </div>
+            </div>
+
+            <div class="product-tabs">
+                <h3>Deskripsi Lengkap</h3>
+                <div id="detail-book-description"></div>
+            </div>
+
+            <section class="related-products">
+                <h2>Buku Terkait</h2>
+                <div class="book-grid" id="related-books-grid"></div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+       <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Deazha Publishing</h4>
+                    <p>Creative Publishing & Event Partner yang berfokus pada layanan penerbitan buku, event organizer, dan jasa konsultasi.</p>
+                </div>
+                <div class="footer-col">
+                    <h5><i class="fa-solid fa-location-dot"></i> Alamat</h5>
+                    <address>
+                        Jalan Locari No. 21c Lowokwaru,<br>
+                        Kota Malang - 65141<br>
+                        Jawa Timur, Indonesia
+                    </address>
+                </div>
+                <div class="footer-col">
+                    <h5><i class="fa-brands fa-whatsapp"></i> Whatsapp</h5>
+                    <p><a href="https://wa.me/628123356850" target="_blank">+62 812 335 6850</a></p>
+                    <h5 class="contact-spacing"><i class="fa-solid fa-envelope"></i> Email</h5>
+                    <p><a href="mailto:deazhaproject@gmail.com">deazhaproject@gmail.com</a></p>
+                </div>
+                <div class="footer-col">
+                    <img src="./images/logo-putih.png" alt="Logo Deazha Publishing" class="footer-logo-main">
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/penerbitdeazha/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+       </div>
+       <div class="footer-copyright">
+            <p>Copyright &copy; 2025 Deazha Publishing | Powered by <a href="https://github.com/fusionprojectid" target="_blank">ArkIntelligent</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/site-data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+

@@ -4,8 +4,15 @@
 
 /* Penyesuaian Jarak Konten Utama */
 .detail-page, .profile-page {
-    padding-bottom: 0;
     background-color: var(--section-bg-dark);
+}
+
+.detail-page {
+    padding-bottom: 96px;
+}
+
+.profile-page .timeline {
+    padding-bottom: 96px;
 }
 
 /* ... (Gaya Breadcrumb, Product Layout, dll. tetap sama) ... */
@@ -126,6 +133,14 @@ body.dark-mode .page-header-logo .logo-light { display: none; }
     .timeline-item { max-width: none; }
 }
 @media (max-width: 544px) {
+    .detail-page {
+        padding-bottom: 72px;
+    }
+
+    .profile-page .timeline {
+        padding-bottom: 72px;
+    }
+
     .related-products .book-grid { grid-template-columns: 1fr; }
     .stats-grid { flex-direction: column; gap: 2rem; }
     .awards-grid { grid-template-columns: 1fr; }
@@ -283,6 +298,14 @@ body.dark-mode .page-header-logo .logo-light { display: none; }
     margin-bottom: 1rem;
 }
 
+.post-source {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.95rem;
+    color: var(--body-text);
+}
+
 /* =================================
    Gaya untuk Halaman Kontak
    ================================= */
@@ -352,6 +375,12 @@ body.dark-mode .page-header-logo .logo-light { display: none; }
 .contact-form textarea:focus {
     outline: none;
     border-color: var(--primary-color);
+}
+
+.form-status {
+    margin-top: 1rem;
+    color: var(--body-text);
+    font-size: 0.95rem;
 }
 
 .map-section {

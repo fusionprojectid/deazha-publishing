@@ -1,15 +1,18 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deazha Publishing</title> 
+    <meta name="description" content="Deazha Publishing membantu penerbitan buku, penulisan, desain cover, layout, ISBN, cetak, event, dan konsultasi publikasi.">
+    <meta property="og:title" content="Deazha Publishing">
+    <meta property="og:description" content="Deazha Publishing membantu penerbitan buku, penulisan, desain cover, layout, ISBN, cetak, event, dan konsultasi publikasi.">
+    <meta property="og:image" content="./images/logo-hitam.png">    <title>Deazha Publishing</title> 
     
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./site.webmanifest" />
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,23 +32,28 @@
                 <img src="./images/logo-putih.png" alt="Logo Deazha Publishing" class="logo-dark">
             </a>
             <div class="search-bar">
-                <input type="text" placeholder="Search...">
+                <input type="search" id="site-search" placeholder="Cari buku atau artikel..." aria-label="Cari buku atau artikel">
                 <button type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
             <div class="header-right">
                 <button id="theme-switch" aria-label="Toggle Dark Mode">
                     <i class="fa-solid fa-moon"></i>
                 </button>
+                <div class="language-switch" aria-label="Pilihan bahasa">
+                    <button type="button" class="language-option active" data-lang="id">ID</button>
+                    <button type="button" class="language-option" data-lang="en">EN</button>
+                </div>
                 <nav class="main-nav" id="nav-links">
                     <ul class="nav-links">
                         <li><a href="index.html" class="active">Home</a></li>
                         <li><a href="katalog.html">Katalog</a></li>
+                        <li><a href="layanan.html">Layanan</a></li>
                         <li><a href="profil.html">Profil</a></li>
                         <li><a href="kontak.html">Hubungi Kami</a></li>
                         <li><a href="blog.html">Blog</a></li>
                     </ul>
                 </nav>
-                <button class="mobile-menu-toggle" id="menu-toggle">
+                <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Buka menu" aria-expanded="false">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
@@ -60,12 +68,12 @@
                         <div class="container hero-container">
                             <div class="hero-text">
                                 <h6>New Release</h6>
-                                <h1>Jalan Teladan Perempuan Pilihan</h1>
-                                <p>Rilisan terbaru Deazha Prima Nusantara, menyajikan kisah-kisah inspiratif.</p>
-                                <a href="detail-jalan-teladan.html" class="btn btn-primary">Lihat Detail Buku</a>
+                                <h1>Melindungi Senyum Anak</h1>
+                                <p>Strategi cegah bullying sejak dini untuk sekolah, guru, dan orang tua.</p>
+                                <a href="detail-buku.html?book=melindungi-senyum-anak" class="btn btn-primary">Lihat Detail Buku</a>
                             </div>
                             <div class="hero-image">
-                                <img src="./images/jalan-teladan-perempuan-pilihan.webp" alt="Sampul buku Jalan Teladan Perempuan Pilihan">
+                                <img src="./images/melindungi-senyum-anak.webp" alt="Sampul buku Melindungi Senyum Anak">
                             </div>
                         </div>
                     </div>
@@ -73,12 +81,12 @@
                         <div class="container hero-container">
                             <div class="hero-text">
                                 <h6>Featured Book</h6>
-                                <h1>Perempuan Menembus Parlemen</h1>
-                                <p>Strategi pemenangan perempuan dalam pemilu legislatif yang komprehensif.</p>
-                                <a href="detail-perempuan-parlemen.html" class="btn btn-primary">Lihat Detail Buku</a>
+                                <h1>Mendidik dengan Cinta, Bertahan dengan Doa</h1>
+                                <p>Kisah dan strategi para guru dalam mendampingi anak-anak belajar.</p>
+                                <a href="detail-buku.html?book=mendidik-dengan-cinta-bertahan-dengan-doa" class="btn btn-primary">Lihat Detail Buku</a>
                             </div>
                             <div class="hero-image">
-                                <img src="./images/Perempuan-Menembus-Parlemen-scaled.webp" alt="Sampul buku Perempuan Menembus Parlemen">
+                                <img src="./images/mendidik-dengan-cinta.webp" alt="Sampul buku Mendidik dengan Cinta, Bertahan dengan Doa">
                             </div>
                         </div>
                     </div>
@@ -86,12 +94,12 @@
                         <div class="container hero-container">
                             <div class="hero-text">
                                 <h6>Featured Book</h6>
-                                <h1>Eco-Teologi: Green Campus</h1>
-                                <p>Mewujudkan lingkungan hijau dan berkelanjutan dari perspektif teologi.</p>
-                                <a href="detail-eco-teologi.html" class="btn btn-primary">Lihat Detail Buku</a>
+                                <h1>7 Kebiasaan Bocah Pinter</h1>
+                                <p>Buku cerita bergambar berbahasa Jawa untuk mengenalkan kebiasaan baik.</p>
+                                <a href="detail-buku.html?book=7-kebiasaan-bocah-pinter" class="btn btn-primary">Lihat Detail Buku</a>
                             </div>
                             <div class="hero-image">
-                                <img src="./images/Eco-Teologi-Mewujudkan-Green-Campus-dan-Eco-Pesantren.webp" alt="Sampul buku Eco-Teologi Mewujudkan Green Campus">
+                                <img src="./images/7-kebiasaan-bocah-pinter.webp" alt="Sampul buku 7 Kebiasaan Bocah Pinter">
                             </div>
                         </div>
                     </div>
@@ -109,32 +117,32 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="book-card">
-                                <a href="detail-perempuan-parlemen.html"><img src="./images/Perempuan-Menembus-Parlemen-scaled.webp" alt="Sampul buku Perempuan Menembus Parlemen"></a>
-                                <h3><a href="detail-perempuan-parlemen.html">Perempuan Menembus Parlemen</a></h3>
+                                <a href="detail-buku.html?book=perempuan-menembus-parlemen"><img src="./images/Perempuan-Menembus-Parlemen-scaled.webp" alt="Sampul buku Perempuan Menembus Parlemen"></a>
+                                <h3><a href="detail-buku.html?book=perempuan-menembus-parlemen">Perempuan Menembus Parlemen</a></h3>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="book-card">
-                                <a href="detail-eco-teologi.html"><img src="./images/Eco-Teologi-Mewujudkan-Green-Campus-dan-Eco-Pesantren.webp" alt="Sampul buku Eco-Teologi"></a>
-                                <h3><a href="detail-eco-teologi.html">Eco-Teologi: Mewujudkan Green Campus</a></h3>
+                                <a href="detail-buku.html?book=eco-teologi"><img src="./images/Eco-Teologi-Mewujudkan-Green-Campus-dan-Eco-Pesantren.webp" alt="Sampul buku Eco-Teologi"></a>
+                                <h3><a href="detail-buku.html?book=eco-teologi">Eco-Teologi: Mewujudkan Green Campus</a></h3>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="book-card">
-                                <a href="detail-jalan-teladan.html"><img src="./images/jalan-teladan-perempuan-pilihan.webp" alt="Sampul buku Jalan Teladan Perempuan Pilihan"></a>
-                                <h3><a href="detail-jalan-teladan.html">Jalan Teladan Perempuan Pilihan</a></h3>
+                                <a href="detail-buku.html?book=jalan-teladan-perempuan-pilihan"><img src="./images/jalan-teladan-perempuan-pilihan.webp" alt="Sampul buku Jalan Teladan Perempuan Pilihan"></a>
+                                <h3><a href="detail-buku.html?book=jalan-teladan-perempuan-pilihan">Jalan Teladan Perempuan Pilihan</a></h3>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="book-card">
-                                <a href="#"><img src="./images/Antologi-Cerpen-When-The-Light-Comes_Deazha.webp" alt="Sampul buku Antologi Cerpen When The Light Comes"></a>
-                                <h3><a href="#">Antologi Cerpen When The Light Comes</a></h3>
+                                <a href="detail-buku.html?book=antologi-cerpen-when-the-light-comes"><img src="./images/Antologi-Cerpen-When-The-Light-Comes_Deazha.webp" alt="Sampul buku Antologi Cerpen When The Light Comes"></a>
+                                <h3><a href="detail-buku.html?book=antologi-cerpen-when-the-light-comes">Antologi Cerpen When The Light Comes</a></h3>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="book-card">
-                                <a href="#"><img src="./images/OJK-Malang-Membangun-Sinergi-Mengabdi-untuk-Negeri.webp" alt="Sampul buku OJK Malang Membangun Sinergi"></a>
-                                <h3><a href="#">OJK Malang Membangun Sinergi</a></h3>
+                                <a href="detail-buku.html?book=ojk-malang-membangun-sinergi"><img src="./images/OJK-Malang-Membangun-Sinergi-Mengabdi-untuk-Negeri.webp" alt="Sampul buku OJK Malang Membangun Sinergi"></a>
+                                <h3><a href="detail-buku.html?book=ojk-malang-membangun-sinergi">OJK Malang Membangun Sinergi</a></h3>
                             </div>
                         </div>
                     </div>
@@ -218,7 +226,7 @@
                 <div class="footer-col">
                     <img src="./images/logo-putih.png" alt="Logo Deazha Publishing" class="footer-logo-main">
                     <div class="footer-social">
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/penerbitdeazha/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
                     </div>
@@ -226,11 +234,15 @@
             </div>
        </div>
        <div class="footer-copyright">
-            <p>Copyright © 2025 Deazha Publishing | Powered by <a href="https://github.com/fusionprojectid" target="_blank">ArkIntelligent</a></p>
+            <p>Copyright &copy; 2025 Deazha Publishing | Powered by <a href="https://github.com/fusionprojectid" target="_blank">ArkIntelligent</a></p>
         </div>
     </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/site-data.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
+
+
+
