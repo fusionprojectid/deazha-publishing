@@ -287,6 +287,15 @@ body.dark-mode .page-header-logo .logo-light { display: none; }
     width: 100%;
 }
 
+.post-image-caption {
+    margin: 0.75rem auto 0;
+    color: var(--body-text);
+    font-size: 0.92rem;
+    line-height: 1.5;
+    text-align: center;
+    max-width: 760px;
+}
+
 .post-full-content {
     font-size: 1.1rem;
     line-height: 1.8;
